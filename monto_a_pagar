@@ -1,0 +1,20 @@
+Proceso monto_a_pagar
+	Definir palabras Como Entero;
+	Definir centimetros como entero;
+	Definir colores Como Entero;
+	Definir monto Como Entero;
+	Escribir "ingrese la cantidad de palabras";
+	leer palabras;
+	Limpiar Pantalla;
+	Escribir "ingrese el tamaño en centimetros";
+	Leer centimetros;
+	Limpiar Pantalla;
+	Escribir "ingrese el numero de colores";
+	leer colores;
+	Limpiar Pantalla;
+	palabras<- palabras * 20.000;
+	centimetros<- centimetros * 15.000;
+	colores<- colores * 25.000;
+	monto<- palabras+centimetros+colores;
+	Escribir "el monto a pagar por el visor calificado es de ",monto;
+FinProceso
