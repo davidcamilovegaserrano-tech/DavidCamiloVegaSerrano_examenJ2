@@ -1,0 +1,53 @@
+// Análisis del Problema: Descuentos en Tienda de Ropa
+// 1. Contexto
+// Una tienda de moda desea incentivar la compra de múltiples prendas para liquidar inventario. Para ello, ofrece descuentos escalonados que dependen de la cantidad de prendas compradas por el cliente.
+// 2. Objetivo
+// Determinar el porcentaje de descuento que se debe aplicar a una compra, basándose únicamente en el número de prendas adquiridas.
+//3. Datos de Entrada
+// Cantidad de prendas compradas:
+//Un número entero positivo que representa cuántas prendas adquiere el cliente.
+//4. Datos de Salida
+//Porcentaje de descuento aplicable:
+//Un valor porcentual (0%, 10%, 20% o 30%) según las reglas establecidas.
+//5. Reglas de Negocio
+//El descuento se asigna de manera progresiva según rangos:
+//Si `n < 3`? 0% de descuento
+//Si `3 <= n < 6` ? 10% de descuento
+//Si `6 <= n < 12` ? 20% de descuento
+//Si `n >= 12` ? 30% de descuento
+//Estas reglas son mutuamente excluyentes, es decir, solo una puede cumplirse a la vez.
+//6. Proceso
+//*Leer la cantidad de prendas compradas.
+//*Comparar dicha cantidad con los rangos definidos.
+//*Asignar el porcentaje de descuento correspondiente.
+//*Mostrar el descuento obtenido.
+//8. Consideraciones
+//* Se asume que la cantidad de prendas es un número entero válido.
+//* No se calcula el precio final, solo el porcentaje de descuento.
+//* El sistema no contempla valores negativos o datos no numéricos.
+//9. Conclusión
+//Este es un problema de decisión que busca clasificar una entrada numérica dentro de rangos definidos para producir una salida específica. Es ideal para practicar condicionales, análisis de rangos y reglas de negocio en programación básica.
+//Si deseas, también puedo ayudarte a redactarlo como análisis de entrada? proceso? salida, diagrama de flujo o caso de uso.
+
+Proceso porcentaje_de_descuento
+	Definir prendas Como Entero;
+	Definir descuento Como Entero;
+	Escribir "ingrese la cantidad de prendas compradas";
+	Leer prendas;
+	si prendas <3 y prendas >0 entonces
+		descuento<-0;
+		Escribir "el descuento es del ",descuento,"%";
+	FinSi
+	si prendas <6 y prendas >=3 entonces
+		descuento<-10;
+		Escribir "el descuento es del ",descuento,"%";
+	FinSi
+	si prendas <12 y prendas >=6 entonces
+		descuento<-20;
+		Escribir "el descuento es del ",descuento,"%";
+	FinSi
+	si prendas >=12 entonces
+		descuento<-30;
+		Escribir "el descuento es del ",descuento,"%";
+	FinSi
+FinProceso
